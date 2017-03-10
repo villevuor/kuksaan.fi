@@ -1,0 +1,114 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+html {
+  color: #000;
+  font: 300 20px/1.618 'Open Sans', sans-serif;
+}
+
+body {
+  max-width: 600px;
+  padding: 1em 10px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 0 #bfe9fb;
+  color: #28a9e1;
+  transition: all 0.25s ease-in-out;
+}
+
+  a:hover {
+    box-shadow: inset 0 -1px 0 0 #84d3f5;
+  }
+
+h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  background: #253764;
+  padding: 0 10px;
+}
+
+p {
+  margin-top: 3em;
+}
+
+  p.lead {
+    margin-top: 1em;
+  }
+
+    @media (min-width: 768px) {
+      p.lead {
+        font-size: 1.618rem;
+      }
+    }
+
+label {
+  font-weight: 600;
+  position: relative;
+}
+
+  label.error:after {
+    content: 'Hmm, linkissä on nyt jotain vikaa.';
+    color: #f04150;
+    display: block;
+    position: absolute;
+    bottom: -6em;
+    width: 300px;
+    font-size: 0.8em;
+  }
+
+input[type="text"] {
+  background: transparent;
+  display: block;
+  font-size: 1em;
+  border: none;
+  border-bottom: 1px solid #253764;
+  margin: 1em 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #505050;
+}
+
+  input[type="text"]:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+#result {
+  background: #14a54b;
+  padding: 1em;
+  color: #fff;
+  position: relative;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+  #result.active {
+    opacity: 1;
+  }
+
+  #result a {
+    font-weight: 300;
+    color: #fff;
+    box-shadow: inset 0 -1px 0 0 rgba(255,255,255,.5);
+  }
+
+    #result a:hover {
+      box-shadow: inset 0 -1px 0 0 #fff;
+    }
+
+  #result #copypaste {
+    display: inline-block;
+    width: auto;
+    text-transform: uppercase;
+    box-shadow: none;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-top: 5px;
+    float: right;
+  }
