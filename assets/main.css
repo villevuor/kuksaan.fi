@@ -111,4 +111,5 @@ input[type="text"] {
     font-weight: 600;
     margin-top: 5px;
     float: right;
+    cursor: pointer;
   }
