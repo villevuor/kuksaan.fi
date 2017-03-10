@@ -30,13 +30,13 @@ function shortenLink() {
 }
 
 function getEventId(link) {
-  var isKuksaLink = /kuksa\.partio\.fi\/Kotisivut\/login\.aspx/i;
+  var isKuksaLink = /kuksa\.partio\.fi\/Kotisivut/i;
 
   if ( !isKuksaLink.test(link) ) {
     return false;
   }
 
-  var getId = /login\.aspx\?Id=([0-9]*)/i;
+  var getId = /Id=([0-9]*)/i;
 
   return link.match(getId)[1];
 }
