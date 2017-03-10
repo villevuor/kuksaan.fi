@@ -50,6 +50,6 @@ var clipboard = new Clipboard('#copypaste', {
 });
 
 clipboard.on('success', function(e) {
-  document.getElementById('copypaste').innerHTML = 'Kopioitu!';
+  document.getElementById('copypaste').innerHTML = 'Kopioitu :)';
   ga('send', 'event', 'Link', 'Link copied to clipboard');
 });
