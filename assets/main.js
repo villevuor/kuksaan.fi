@@ -21,8 +21,7 @@ function shortenLink() {
     return false;
   }
 
-  target.href = 'https://kuksaan.fi/' + eventId;
-  target.innerHTML = 'kuksaan.fi/' + eventId;
+  target.value = 'kuksaan.fi/' + eventId;
 
   setTimeout(function(){
     result.classList += ' active';
@@ -46,7 +45,7 @@ function getEventId(link) {
 
 var clipboard = new Clipboard('#copypaste', {
   text: function() {
-      return document.getElementById('shortened').getAttribute('href').replace('https://', '');
+      return document.getElementById('shortened').value;
   }
 });
 
