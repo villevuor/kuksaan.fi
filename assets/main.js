@@ -39,8 +39,6 @@ function getEventId(link) {
   var getId = /login\.aspx\?Id=([0-9]*)/i;
 
   return link.match(getId)[1];
-
-  // https://kuksa.partio.fi/Kotisivut/login.aspx?Id=13858
 }
 
 var clipboard = new Clipboard('#copypaste', {
