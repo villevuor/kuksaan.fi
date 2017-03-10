@@ -27,12 +27,15 @@ function shortenLink() {
   setTimeout(function(){
     result.classList += ' active';
   }, 100);
+
+  ga('send', 'event', 'Link', 'Link shortened', eventId);
 }
 
 function getEventId(link) {
   var isKuksaLink = /kuksa\.partio\.fi\/Kotisivut/i;
 
   if ( !isKuksaLink.test(link) ) {
+    ga('send', 'event', 'Link', 'Link short failed', link);
     return false;
   }
 
@@ -49,4 +52,5 @@ var clipboard = new Clipboard('#copypaste', {
 
 clipboard.on('success', function(e) {
   document.getElementById('copypaste').innerHTML = 'Kopioitu!';
+  ga('send', 'event', 'Link', 'Link copied to clipboard');
 });
