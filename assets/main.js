@@ -31,7 +31,7 @@ function shortenLink() {
 }
 
 function getEventId(link) {
-  var isKuksaLink = /kuksa\.partio\.fi\/Kotisivut/i;
+  var isKuksaLink = /kuksa\.partio\.fi/i;
 
   if ( !isKuksaLink.test(link) ) {
     ga('send', 'event', 'Link', 'Link short failed', link);
